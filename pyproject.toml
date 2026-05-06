@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pycliped"
+version = "0.1.0"
+description = "Live-edit clipboard text with custom Python code or built-in presets."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+authors = [{ name = "Al Sweigart", email = "asweigart@gmail.com" }]
+keywords = ["clipboard", "tkinter", "text", "automation", "pyperclip"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: X11 Applications",
+    "Environment :: Win32 (MS Windows)",
+    "Environment :: MacOS X",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Utilities",
+]
+dependencies = ["pyperclip>=1.8"]
+
+[project.urls]
+Homepage = "https://github.com/asweigart/pycliped"
+
+[project.scripts]
+pycliped = "pycliped.app:main"
+
+[project.gui-scripts]
+pycliped-gui = "pycliped.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
